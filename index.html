@@ -35,15 +35,30 @@
 <body>
 	<div>
 		<a>1583</a><br></br><b>Введи то что тебе нашептали инопришеленцы</b>
-	</div>
 
-	<div>
-	    <form action="process.php" method="post">
-	        <input type="text" name="message" placeholder="Введите сообщение">
-	        <input type="submit" value="Отправить">
+	    <form id="myForm">
+	        <input type="text" id="inputText" placeholder="Введите текст">
+	        <button type="submit">Отправить</button>
 	    </form>
+	    <p id="result"></p>
 	</div>
 
+
+	<script>
+		document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+            
+            var inputText = document.getElementById('inputText').value;
+            var resultElement = document.getElementById('result');
+            
+            if (inputText === "Elvina") {
+                resultElement.textContent = "Elvina Molodec";
+            } else {
+                resultElement.textContent = "Ты явно думаешь не о то о чем надо брат"
+            }
+        });
+
+	</script>
 </body>
 
 
