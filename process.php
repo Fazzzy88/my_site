@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 
 $message = $_POST["message"];
@@ -10,5 +9,3 @@ if ($message == "123") {
 }
 
 ?>
-
-</html>
